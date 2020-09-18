@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Signup For A Free Trial Class</h2>
+
+    <div class="cont">
+      <div class="form">
+        <form class="myform" method="POST" action="http://127.0.0.1:3000/forms">
+          <h1>NotchUp</h1>
+          <div class="errors"></div>
+          <input
+            type="text"
+            class="user namef fieldd"
+            placeholder="Parents Name"
+            name="parentsName"
+            required
+          />
+          <input
+            type="number"
+            class="user phone fieldd"
+            placeholder="Parents Contact Number"
+            name="parentsPhoneNumber"
+            required
+          />
+          <input
+            type="email"
+            class="user emailf fieldd"
+            placeholder="Parents Email ID"
+            name="parentsEmailId"
+            required
+          />
+          <input
+            type="text"
+            class="user childnamef fieldd"
+            placeholder="Child's Name"
+            name="childsName"
+            required
+          />
+          <input
+            type="number"
+            class="user childagef fieldd"
+            placeholder="Child's Age"
+            name="childsAge"
+            required
+          />
+          <span class="radio-bb">
+            <div class="select animated zoomIn select-div course">
+              <!-- You can toggle select (disabled) -->
+              <input type="radio" name="courseName" id="course" />
+              <i class="toggle icon icon-arrow-down"></i>
+              <i class="toggle icon icon-arrow-up"></i>
+              <span class="placeholder">Choose Course</span>
+            </div>
+            <div class="select animated zoomIn select-div course-date">
+              <!-- You can toggle select (disabled) -->
+              <input type="radio" name="dateAlloted" id="course-date" />
+              <i class="toggle icon icon-arrow-down"></i>
+              <i class="toggle icon icon-arrow-up"></i>
+              <span class="placeholder">Choose Date</span>
+            </div>
+            <div class="select animated zoomIn select-div course-date-time">
+              <!-- You can toggle select (disabled) -->
+              <input type="radio" name="dayAlloted" id="course-date-time" />
+              <i class="toggle icon icon-arrow-down"></i>
+              <i class="toggle icon icon-arrow-up"></i>
+              <span class="placeholder">Choose Day</span>
+            </div>
+          </span>
+          <a class="login">Send</a>
+        </form>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
