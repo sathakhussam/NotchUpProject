@@ -53,12 +53,12 @@ function sendingMail(reciever, ParentName, StudentName, date, day) {
     // turn on the less secure apps on gmail
     auth: {
       user: "mohamedhussam4002@gmail.com",
-      pass: "satush12",
+      pass: "YourPassword",
     },
   });
 
   var mailOptions = {
-    from: "youremail@gmail.com",
+    from: "mohamedhussam4002@gmail.com",
     to: `${reciever}`,
     subject: "NotchUp Trial Class Booked successfully",
     text: `Dear ${ParentName}\n ${StudentName}'s class at ${date} ${day} has been successfully booked.`,

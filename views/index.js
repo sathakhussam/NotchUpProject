@@ -229,32 +229,41 @@ btnlog.addEventListener("click", (e) => {
       break;
     }
   }
+
+  const bodyContent = JSON.stringify({
+    parentsName: document.querySelector(".namef").value,
+    parentsEmailId: document.querySelector(".emailf").value,
+    parentsPhoneNumber: document.querySelector(".phone").value,
+    childsName: document.querySelector(".childnamef").value,
+    childsAge: document.querySelector(".childagef").value,
+    CourseName: `${CourseName}`,
+    dateAlloted: `${DateAlloted}`,
+    dayAlloted: `${DayAlloted}`,
+  });
+  // console.log(bodyContent);
+
   fetch("http://127.0.0.1:3000/forms", {
     // Adding method type
     method: "POST",
 
     // Adding body or contents to send
 
-    body: JSON.stringify({
-      parentsName: document.querySelector(".namef").value,
-      parentsEmailId: document.querySelector(".emailf").value,
-      parentsPhoneNumber: document.querySelector(".phone").value,
-      childsName: document.querySelector(".childnamef").value,
-      childsAge: document.querySelector(".childagef").value,
-      CourseName: `${CourseName}`,
-      DateAlloted: `${DateAlloted}`,
-      DayAlloted: `${DayAlloted}`,
-    }),
+    body: bodyContent,
 
     // Adding headers to the request
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
   })
-    // Converting to JSON
     .then((response) => response.json())
+    // Converting to JSON
 
     // Displaying results to console
-    .then((json) => json);
+    .then((json) => {
+      return json;
+    });
+  document.querySelector(".myform").reset();
+
+  // console.log(bodyContent);
   e.preventDefault();
 });
