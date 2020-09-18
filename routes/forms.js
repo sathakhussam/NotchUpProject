@@ -36,7 +36,7 @@ router.post("/", async (req, res) => {
       req.body.parentsName,
       req.body.childsName,
       req.body.dateAlloted,
-      req.body.DayAlloted
+      req.body.dayAlloted
     );
   } catch (err) {
     res.send(`There is an error, ${err}`);
